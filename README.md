@@ -1,7 +1,7 @@
 # Techacks3.0
 TecHacks3.0 Submission
 
-<h1><a href="https://geno-happiness-index.herokuapp.com">Geno</a></h1>
+<h1><a href="https://geno.my.canva.site/">Geno</a></h1>
 
 <img src="static/images/genologo.png" alt="logo" width="200" height="200"/>
 
