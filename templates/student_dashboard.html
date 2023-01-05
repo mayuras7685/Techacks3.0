@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <nav class="navbar bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Geno</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          style="background-color: #e3f2fd"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Geno</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#featurre"
+                  >Fetures</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="index.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Role
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="teachers.html">Teacher</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="student_dashboard.html"
+                      >Student</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="weekly_servey.html"
+                  >Weekly Survey</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="addmood">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 40px">
+            Hey, <span style="color: #2563eb">Mayur </span>👋
+          </h5>
+          <p class="card-text" style="font-size: 20px">
+            How was your day today?
+          </p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add Mood
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--add mood Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Mood</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          </div>
+          
+          <div class="modal-body">
+            <h5>How was your day?</h5>
+
+            <div class="row mb-2">
+              <div class="col-md-2 ms-auto">
+                <span class="text-base" style="font-size: 30px">🙁</span><br />
+                <span class="false">Rough day</span>
+              </div>
+
+              <div class="col-md-2 ms-auto">
+                <span class="text-base" style="font-size: 30px">😐</span><br />
+                <span class="false">Not good</span>
+              </div>
+              <div class="col-md-2 ms-auto">
+                <span class="text-base" style="font-size: 30px">🙂</span><br />
+                <span class="false">Not bad</span>
+              </div>
+
+              <div class="col-md-2 ms-auto">
+                <span class="text-base" style="font-size: 30px">😄</span><br />
+                <span class="false">Good</span>
+              </div>
+
+              <div class="col-md-2 ms-auto">
+                <span class="text-base" style="font-size: 30px">🤗</span><br />
+                <span class="false">Great!</span>
+              </div>
+            </div>
+
+            <div class="mb-3>
+              <label for="exampleFormControlTextarea1" class="form-label"
+                ><strong>Note:</strong></label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+          <div class="d-grid gap-2" style="margin-left: 12px; margin-right: 12px; margin-bottom: 5px;">
+  <button class="btn btn-primary" type="button">Add Mood</button>
+</div>
+        </div>
+      </div>
+    </div>
+<div><span style="margin-left: 50px; font-weight:500; font-size:medium">Stats</span></div>
+
+    <div class="graph" style="margin: auto auto">
+      <ul class="months">
+        <li>Jan</li>
+        <li>Feb</li>
+        <li>Mar</li>
+        <li>Apr</li>
+        <li>May</li>
+        <li>Jun</li>
+        <li>Jul</li>
+        <li>Aug</li>
+        <li>Sep</li>
+        <li>Oct</li>
+        <li>Nov</li>
+        <li>Dec</li>
+      </ul>
+      <ul class="days">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="squares">
+        <!-- added via javascript -->
+      </ul>
+    </div>
+
+    
+     <div class="container text-center">
+  <div class="row">
+    <div class="col">
+         <canvas id="lineChart" aria-label="chart" role="img"></canvas>
+    </div>
+    <div class="col">
+       <canvas id="myChart" aria-label="chart" role="img"></canvas>
+    </div>
+  </div> 
+  </div>
+
+     <div class="chart" style="max-width: 940px; max-height: 300px; margin-top: 50px; margin: 50px auto;">
+      <canvas id="mlChart" aria-label="chart" role="img"></canvas>
+    </div>
+
+  </body>
+  <script src="../static/js/index.js"></script>
+  <script src="../static/js/chart.js"></script>
+  <script src="../static/js/datavis.js"></script>
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+</html>
