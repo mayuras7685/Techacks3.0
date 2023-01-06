@@ -1,0 +1,112 @@
+{% extends "forum/base-temp.html" %}
+{% load static %}
+
+{% block style %} 
+<link rel="stylesheet" href="{% static 'profiles/main.css' %}">
+<style>
+  card-registration,select-input,form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  card-registration,select-arrow {
+  top: 13px;
+  }
+  #reset{
+    background-color:  #eeeeee!important;
+    border: #000 !important;
+    box-shadow: #789092 !important;
+    box-shadow:3px 3px 5px #888888; 
+    margin-right: 5vh !important;
+  }
+  #submit{
+    background-color:  #bff5fa!important;
+    box-shadow:3px 3px 5px #888888; 
+  }
+  #reset:hover{
+    background-color: #789092 !important;
+    color: #000 !important;
+  }
+  #submit:hover{
+    color: #000 !important;
+  }
+</style>
+{% endblock style %} 
+
+{% block body %}
+    <section class="h-100 bg-light">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100" style="margin-top: 7vh;">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row g-0">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="{% static 'profiles/school.png' %}"
+                      alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: -webkit-fill-available;" />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase">School registration form</h3>
+                      <form action="" method="POST">
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="pno">Phone number</label>
+                            <input type="text" id="pno" name="pno" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="text" id="email" class="form-control form-control-lg" name="email"/>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="address">Address</label>
+                            <input type="text" id="address" name="address" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="board">Board</label>
+                            <input type="text" id="board" name="board" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="city">City</label>
+                            <input type="text" id="city" name="city" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="state">State</label>
+                            <input type="text" id="state" name="state" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="d-flex justify-content-end pt-3">
+                        <button type="reset" class="btn btn-light btn-lg" id="reset">Reset all</button>
+                        <button type="submit" class="btn btn-warning btn-lg ms-2" id="submit">Submit form</button>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    {% endblock body %}

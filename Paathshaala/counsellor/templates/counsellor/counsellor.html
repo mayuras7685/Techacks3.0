@@ -1,0 +1,96 @@
+{% extends "forum/base-temp.html" %}
+{% load static %}
+{% block style %} 
+<style>
+    @import url(//fonts.googleapis.com/css?family=Montserrat:300,400,500);
+.contact3 .h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #8d97ad;
+  font-weight: 300;
+}
+
+.contact3 h1,
+.contact3 h2,
+.contact3 h3,
+.contact3 h4,
+.contact3 h5,
+.contact3 h6 {
+  color: #3e4555;
+}
+
+.contact3 .font-weight-medium {
+  font-weight: 500;
+}
+
+.contact3 .card-shadow {
+  -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+.card-shadow{
+  margin: 6vh; 
+  margin-right: 0 !important;
+  margin-left: 8vh;
+}
+.contact-box{
+  margin: 6vh;
+  margin-right: 10vh;
+}
+.contact3 .btn-danger-gradiant {
+  background: #bff5fa;
+}
+.col-lg-12{
+  margin-top: 2vh;
+}
+</style>
+{% endblock style %}
+
+{% block body %}
+<div class="contact3 py-5" style="margin-top: 2vh;">
+    <div class="row no-gutters" style="margin:8vh;">
+      <div class="container">
+        <div class="row" style="box-shadow: 3px 3px 18px #888888;">
+          <div class="col-lg-6">
+            <div class="card-shadow">
+              <img src="{% static 'counsellor/counsel.png' %}" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-box ml-3">
+              <h1 class="font-weight-light mt-2 display-5">Connect To A Counsellor</h1>
+              <form class="mt-2" action="" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-12" >
+                    <div class="form-group mt-2">
+                      <input class="form-control" type="email" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                      <textarea class="form-control" type="text" name="address" rows="4" placeholder="Address"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                      <textarea class="form-control" type="text" name="pincode" rows="4" placeholder="Pincode"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                      <textarea class="form-control" type="text" name="problem" rows="4" placeholder="Description"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <button type="submit" class="btn btn-danger-gradiant mt-3 text-black border-0 px-3 py-2"><span> SUBMIT</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

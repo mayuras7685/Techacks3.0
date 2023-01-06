@@ -1,0 +1,75 @@
+from django.db import models
+from autoslug import AutoSlugField
+from profiles.models import School, Student
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+
+class Data(models.Model):
+    # size = models.IntegerField(validators=[MinValueValidator(0),
+    #                                    MaxValueValidator(5)])
+    school = models.ForeignKey(School, on_delete=models.CASCADE, default=1)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, blank=True, null=True)
+    levelc = models.IntegerField()
+    env = models.IntegerField()
+    teachersc = models.IntegerField()
+    prevdisc= models.IntegerField()
+    fecilities = models.IntegerField()
+    timetable = models.IntegerField()
+    grpwork = models.IntegerField()
+    mentalhlth = models.IntegerField()
+    sportart=models.IntegerField()
+    solveprob=models.IntegerField()
+    creativecourse=models.IntegerField()
+    foconindv=models.IntegerField()
+    mannlearn=models.IntegerField()
+    courserele=models.IntegerField()
+    issuesofconc=models.IntegerField()
+    aresolved=models.IntegerField()
+    others = models.CharField(max_length=1000)
+    #slug = AutoSlugField(populate_from='disc_title', unique=True)
+
+class Data3(models.Model):
+    school = models.ForeignKey(School, on_delete=models.CASCADE, default=1)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, blank=True, null=True)
+    levelc = models.IntegerField()
+    life_skills = models.IntegerField()
+    exam_in_acc_course = models.IntegerField()
+    innovation_time = models.IntegerField()
+    support = models.IntegerField()
+    anxiety = models.IntegerField()
+    alienated = models.IntegerField()
+    family_burden = models.IntegerField()
+    insecurity = models.IntegerField()
+    fundamental_rules = models.IntegerField()
+    others = models.TextField()
+    solution = models.TextField(blank=True,null=True)
+
+class Data2(models.Model):
+    school = models.ForeignKey(School, on_delete=models.CASCADE, default=1)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, blank=True, null=True)
+    levelc = models.IntegerField()
+    extra_curr = models.IntegerField()
+    course_rev = models.IntegerField()
+    violence = models.IntegerField()
+    teachers = models.IntegerField()
+    anxiety = models.IntegerField()
+    environment = models.IntegerField()
+    grpwork = models.IntegerField()
+    secure = models.IntegerField()
+    socially_active = models.IntegerField()
+    others = models.TextField()
+    solution = models.TextField(blank=True,null=True)
+
+class Data1(models.Model):
+    school = models.ForeignKey(School, on_delete=models.CASCADE, default=1)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, blank=True, null=True)
+    playtime = models.IntegerField()
+    extra_curr = models.IntegerField()
+    difficult = models.IntegerField()
+    materials = models.IntegerField()
+    fear = models.IntegerField()
+    like_sch = models.IntegerField()
+    environment = models.IntegerField()
+    like_friends = models.IntegerField()
+    others = models.TextField()
+    solution = models.TextField(blank=True,null=True)

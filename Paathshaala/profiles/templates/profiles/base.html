@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %} {% endblock title %}</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'profiles/genologo.png' %}"
+      type="image/x-icon"
+    />
+    <!-- These are the keywords that will help find your website on search engines  -->
+    <meta
+      name="keywords"
+      content="health,happiness index, school ranking,wellbeing,mental health"
+    />
+
+    <!-- This how you include externa css -->
+    {% block connectcss %} {% endblock connectcss %}
+  </head>
+
+  <body
+    data-theme-mode-panel-active
+    data-theme="light"
+    style="font-family: 'Mazzard H'"
+  >
+    <div class="site-wrapper overflow-hidden position-relative">
+      {% include 'profiles/navbar.html' %}
+      <!-- navbar- -->
+    </div>
+    {% block content %} {% endblock content %}
+  </body>
+  {% block script %} {% endblock script %}
+</html>
