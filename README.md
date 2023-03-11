@@ -8,7 +8,7 @@ TecHacks3.0 Submission
 # Problem statment 
 Mental health and well-being are important factors in the overall success and happiness of students, yet many schools struggle to effectively measure and support the emotional well-being of their students. 
 
-There is a need for a tool that can help schools track and improve the happiness of their students in order to create a more positive school culture and support the overall wellbeing of the student body.
+There is a need for a tool that can help schools track and improve the happiness of their students in order to create a more positive school culture and support the overall well-being of the student body.
 
 # Solution
 We have to develop an application that calculates the Happiness Index of students and ranks schools accordingly. The application also provides suggestions to overcome the weaknesses in the school structure. The rankings would allow new parents to select schools that are suitable for their children and also motivate the schools to do better and improve their ranks
