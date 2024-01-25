@@ -33,7 +33,7 @@ We have to develop an application that calculates the Happiness Index of student
 
 Clone the project -
 ```
-  $ cd Pathshala
+  $ cd Paathshaala
 ```
   
 Install all the requirements -
@@ -48,7 +48,7 @@ Run the following commands -
   $ python manage.py makemigrations
 ``` 
  for windows :
- ``` 
+ ```
   $ python manage.py migrate
   $ python manage.py makemigrations
  ``` 
@@ -61,4 +61,4 @@ Start the project -
  for windows :
 ``` 
   $ python manage.py runserver
-`
+```
