@@ -29,3 +29,36 @@ We have to develop an application that calculates the Happiness Index of student
 
 -   a questionnaire may not capture all factors that influence a student's happiness.
 -   also, we add mood manually that's why some time happiness score is not up to the mark.
+### To run this project :
+
+Clone the project -
+```
+  $ cd Pathshala
+```
+  
+Install all the requirements -
+```
+  $ pip install -r requirements.txt
+ ``` 
+Run the following commands -
+
+ for linux/mac :
+``` 
+  $ python manage.py migrate
+  $ python manage.py makemigrations
+``` 
+ for windows :
+ ``` 
+  $ python manage.py migrate
+  $ python manage.py makemigrations
+ ``` 
+Start the project -
+ - ### Run the Web Application -
+ for linux/mac :
+```
+  $ python manage.py runserver
+```  
+ for windows :
+``` 
+  $ python manage.py runserver
+`
